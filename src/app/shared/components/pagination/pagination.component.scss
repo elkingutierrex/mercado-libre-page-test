@@ -1,3 +1,11 @@
 .btn-next{
   cursor: pointer;
 }
+.pagination-page{
+  display: flex;
+  white-space: nowrap;
+  align-items: center;
+}
+.txt-select{
+  margin-right: 1rem;
+}
