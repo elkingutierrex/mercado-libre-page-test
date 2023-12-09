@@ -16,6 +16,7 @@ import { NoDataComponent } from './shared/components/no-data/no-data.component';
 import { PaginationComponent } from './shared/components/pagination/pagination.component';
 import { SearchBarComponent } from './shared/components/search-bar/search-bar.component';
 import { FormsModule } from '@angular/forms';
+import { NumberFormatPipe } from './pipe/number-format.pipe';
 
 @NgModule({
   declarations: [
@@ -30,7 +31,8 @@ import { FormsModule } from '@angular/forms';
     NavbarComponent,
     NoDataComponent,
     PaginationComponent,
-    SearchBarComponent
+    SearchBarComponent,
+    NumberFormatPipe
   ],
   imports: [
     BrowserModule,

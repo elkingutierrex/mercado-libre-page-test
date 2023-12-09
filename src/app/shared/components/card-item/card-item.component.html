@@ -1,1 +1,28 @@
-<p>card-item works!</p>
+<div  class="card mb-3">
+  <div class="row g-0">
+    <div class="col-md-3">
+      <img [src]="imageUrl? imageUrl : '../../../../assets/images/camera.png'"
+            class="img-fluid rounded-start px-2 py-2 card-image"
+            alt="Foto producto">
+    </div>
+    <div class="col-md-8">
+      <div class="card-body row">
+        <h3 class="card-title">
+         $ {{ objItem.price | numberFormat }}
+        </h3>
+        <div class="col-md-9 pt-3">
+          <h5>
+            {{ objItem.title }}
+          </h5>
+        </div>
+        <div class="col-md-3">
+
+            <small class="text-muted">
+              {{ objItem.available_quantity }} Unidades disponibles
+            </small>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

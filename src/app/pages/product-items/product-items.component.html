@@ -1,1 +1,21 @@
-<p>product-items works!</p>
+<router-outlet></router-outlet>
+
+<h3 class="pt-5">Busqueda relacionada</h3>
+
+<div class="container mt-4" *ngIf="arrayItems && arrayItems.length; else noData">
+  <div *ngFor="let item of arrayItems">
+    <app-card-item  [id]="item.id"
+                    [title]="item.title"
+                    [price]="item.price"
+                    [imageUrl]="item.thumbnail"
+                    [objItem]="item"
+                    (click)="redirectToUrlParam(item.id)"></app-card-item>
+  </div>
+
+  <app-pagination [result]="arrayResult.paging"
+                  (nextPage)="getItemsByQuery()"></app-pagination>
+</div>
+
+<ng-template #noData>
+  <app-no-data *ngIf="_app.objCtrl.swSearchComplete"></app-no-data>
+</ng-template>
