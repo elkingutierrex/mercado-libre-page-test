@@ -1,1 +1,25 @@
-<p>search-bar works!</p>
+
+<div class="col-12" style="width: max-content;">
+
+  <div class="input-group search-bar-width" style="width: 60vw;">
+
+    <input  id="inputSearch"
+            type="search"
+            class="form-control"
+            placeholder="Nunca dejes de buscar"
+            aria-label="Nunca dejes de buscar"
+            [(ngModel)]="txtSearch"
+            (click)="$event.preventDefault()"
+            (keyup.enter)="redirectToUrlWithQuery(txtSearch)">
+    <div class="input-group-append">
+      <button class="btn btn-outline-secondary"
+              type="button"
+              id="button-addon2"
+              style="background-color: aliceblue;"
+              (click)="redirectToUrlWithQuery(txtSearch)">
+        <img src="../../../../assets/ico/ic_Search.png" alt="search_btn">
+      </button>
+    </div>
+  </div>
+</div>
+

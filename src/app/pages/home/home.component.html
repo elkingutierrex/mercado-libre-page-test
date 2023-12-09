@@ -1,1 +1,8 @@
-<p>home works!</p>
+<div class="container container-page">
+  <router-outlet></router-outlet>
+  <img src="../../../assets/images/nunca_dejes_de_buscar.png"
+        alt="Nunca dejes de buscar"
+        class="image-background"
+        *ngIf="!_app.objCtrl.swSearchComplete">
+</div>
+

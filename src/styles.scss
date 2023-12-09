@@ -1,1 +1,23 @@
 /* You can add global styles to this file, and also import other style files */
+
+.mercado-libre-color{
+  background: #ffe600;
+}
+.background-color{
+  background-color: #ebebeb
+}
+
+.container-page {
+  height: 100%;
+  min-height: 100vh;
+}
+
+.detail-image{
+  max-height: 20rem;
+  min-height: 20rem;
+  text-align: center;
+}
+
+.bs-breadcrumb-divider{
+  quotes: '>';
+}
