@@ -1,1 +1,8 @@
-<p>item-detail works!</p>
+<div class="container mt-5" *ngIf="objItem.title; else noData">
+  <app-breadcrumb [arrayTags]="objItem.tags"></app-breadcrumb>
+  <app-card-item-detail [product]="objItem"></app-card-item-detail>
+</div>
+
+<ng-template #noData>
+  <app-no-data *ngIf="_app.objCtrl.swSearchComplete"></app-no-data>
+</ng-template>

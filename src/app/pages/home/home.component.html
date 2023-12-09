@@ -1,8 +1,11 @@
 <div class="container container-page">
   <router-outlet></router-outlet>
-  <img src="../../../assets/images/nunca_dejes_de_buscar.png"
-        alt="Nunca dejes de buscar"
-        class="image-background"
-        *ngIf="!_app.objCtrl.swSearchComplete">
+  <div *ngIf="!_app.objCtrl.swSearchComplete"
+        class="container-image">
+    <img src="../../../assets/images/nunca_dejes_de_buscar.png"
+          alt="Nunca dejes de buscar"
+          class="image-background"
+          >
+  </div>
 </div>
 

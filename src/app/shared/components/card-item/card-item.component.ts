@@ -8,7 +8,7 @@ import { Component, Input, OnInit } from '@angular/core';
 })
 export class CardItemComponent implements OnInit {
 
-  @Input() title:String ='';
+  @Input() title:string ='';
   @Input() price:number = 0;
   @Input() imageUrl:string = '';
 

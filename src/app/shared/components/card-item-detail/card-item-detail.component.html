@@ -1,1 +1,37 @@
-<p>card-item-detail works!</p>
+<div class="card">
+
+  <div class="row">
+    <div class="col-sm-12 col-md-8 detail-image mt-3">
+      <app-carousel [arrayImages]="product.pictures" class="detail-image" ></app-carousel>
+      <!-- <img class="detail-image"
+       [src]="product.thumbnail"
+      alt="Card image cap"> -->
+    </div>
+    <div class="col-sm-12 col-md-4 mt-3">
+      <div class="px-3">
+        <span class="txt-product-resume"> Nuevo - {{ product.sold_quantity }} vendidos</span>
+        <h2> {{ product.title }} </h2>
+        <span class="txt-product-value"> $ {{ product.price | numberFormat }} </span>
+        <button type="button"
+                class="btn btn-primary btn-lg btn-block btn-buy mt-5"
+                (click)="buyItem('1')">
+                Compar
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <div class="card-body">
+    <h5 class="card-title">
+      Descripción del producto
+    </h5>
+    <p class="card-text">
+     {{ product.warranty }}
+    </p>
+    <br>
+    <p *ngIf="product && product.addDesciption && product.addDesciption.plain_text">
+      {{ product.addDesciption.plain_text }}
+    </p>
+
+  </div>
+</div>

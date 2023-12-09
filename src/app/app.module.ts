@@ -7,7 +7,7 @@ import { AppComponent } from './app.component';
 import { HomeComponent } from './pages/home/home.component';
 import { ProductItemsComponent } from './pages/product-items/product-items.component';
 import { ItemDetailComponent } from './pages/product-items/item-detail/item-detail.component';
-import { BreadcumbComponent } from './shared/components/breadcumb/breadcumb.component';
+import { BreadcrumbComponent } from './shared/components/breadcrumb/breadcrumb.component';
 import { CardItemComponent } from './shared/components/card-item/card-item.component';
 import { CardItemDetailComponent } from './shared/components/card-item-detail/card-item-detail.component';
 import { CarouselComponent } from './shared/components/carousel/carousel.component';
@@ -24,7 +24,7 @@ import { NumberFormatPipe } from './pipe/number-format.pipe';
     HomeComponent,
     ProductItemsComponent,
     ItemDetailComponent,
-    BreadcumbComponent,
+    BreadcrumbComponent,
     CardItemComponent,
     CardItemDetailComponent,
     CarouselComponent,
