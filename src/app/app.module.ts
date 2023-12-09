@@ -6,13 +6,29 @@ import { AppComponent } from './app.component';
 import { HomeComponent } from './pages/home/home.component';
 import { ProductItemsComponent } from './pages/product-items/product-items.component';
 import { ItemDetailComponent } from './pages/product-items/item-detail/item-detail.component';
+import { BreadcumbComponent } from './shared/components/breadcumb/breadcumb.component';
+import { CardItemComponent } from './shared/components/card-item/card-item.component';
+import { CardItemDetailComponent } from './shared/components/card-item-detail/card-item-detail.component';
+import { CarouselComponent } from './shared/components/carousel/carousel.component';
+import { NavbarComponent } from './shared/components/navbar/navbar.component';
+import { NoDataComponent } from './shared/components/no-data/no-data.component';
+import { PaginationComponent } from './shared/components/pagination/pagination.component';
+import { SearchBarComponent } from './shared/components/search-bar/search-bar.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
     ProductItemsComponent,
-    ItemDetailComponent
+    ItemDetailComponent,
+    BreadcumbComponent,
+    CardItemComponent,
+    CardItemDetailComponent,
+    CarouselComponent,
+    NavbarComponent,
+    NoDataComponent,
+    PaginationComponent,
+    SearchBarComponent
   ],
   imports: [
     BrowserModule,
