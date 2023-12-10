@@ -14,7 +14,7 @@ export class ItemDetailComponent implements OnInit {
   idItem:string|null='';
   objItem: Product|any ={};
   constructor( private route: ActivatedRoute,
-              public _app: AppService) { }
+              public appService: AppService) { }
 
   ngOnInit(): void {
     this.getItemById();
@@ -26,7 +26,7 @@ export class ItemDetailComponent implements OnInit {
     this.route.paramMap.subscribe(params => {
       if(params.has('id')){
         this.idItem = params.get('id');
-        this._app.getItemById( this.idItem ).subscribe( res =>{
+        this.appService.getItemById( this.idItem ).subscribe( res =>{
           const data = res;
           if( !data ){
             return
@@ -41,7 +41,7 @@ export class ItemDetailComponent implements OnInit {
   }
 
   getDescriptionItemById ( idItem: any ){
-     this._app.getDescriptionItemById( idItem ).subscribe( res =>{
+     this.appService.getDescriptionItemById( idItem ).subscribe( res =>{
           const data = res;
           if( !data ){
             return

@@ -8,6 +8,6 @@ import { AppService } from 'src/app/services/app.service';
 })
 export class HomeComponent {
 
-  constructor( public _app : AppService ) { }
+  constructor( public appService : AppService ) { }
 
 }

@@ -8,7 +8,7 @@
 
         <select class="form-select"
                 aria-label="Default select example"
-                [(ngModel)]="_app.objCtrl.limitItemsPerPage"
+                [(ngModel)]="appService.objCtrl.limitItemsPerPage"
                 (ngModelChange)="emitEvent()">
           <option disabled>Items por pagina</option>
           <option *ngFor="let item of arrayItemsPerPage"
@@ -26,7 +26,7 @@
         </li>
         <li class="page-item disabled" aria-current="page">
           <a class="page-link" *ngIf="result && result.total">
-            Página:  {{ _app.objCtrl.actualPage }} de {{ (result.total / _app.objCtrl.limitItemsPerPage) | number : '1.0-0' }}
+            Página:  {{ appService.objCtrl.actualPage }} de {{ (result.total / appService.objCtrl.limitItemsPerPage) | number : '1.0-0' }}
           </a>
         </li>
         <li class="page-item btn-next" (click)="changePage(+1)">

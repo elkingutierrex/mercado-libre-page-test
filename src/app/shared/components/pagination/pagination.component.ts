@@ -13,7 +13,7 @@ export class PaginationComponent implements OnInit {
   @Input() result: any  = {};
   @Output() nextPage : EventEmitter<boolean> = new EventEmitter();
 
-  constructor( public _app : AppService) { }
+  constructor( public appService : AppService) { }
 
   ngOnInit(): void {
 
@@ -21,10 +21,10 @@ export class PaginationComponent implements OnInit {
 
   changePage( next:number ){
     const length = this.result.total;
-    const position =  this._app.objCtrl.actualPage;
+    const position =  this.appService.objCtrl.actualPage;
     if (( length >  (position + next) && next > 0) ||
         ((position + next) > 0 && next < 0) ){
-        this._app.objCtrl.actualPage =  position + next;
+        this.appService.objCtrl.actualPage =  position + next;
         this.emitEvent();
     }
   }
