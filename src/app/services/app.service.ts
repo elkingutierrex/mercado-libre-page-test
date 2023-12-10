@@ -16,7 +16,8 @@ export class AppService {
     offsetPage        : 0,
     idItemSearch      : '',
     productSearch     : '',
-    swSearchComplete  : false
+    swSearchComplete  : false,
+    txtPlaceholder    : "Nunca dejes de buscar"
   }
 
   constructor( private http : HttpClient ) { }

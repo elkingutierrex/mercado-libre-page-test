@@ -1,13 +1,11 @@
 
-<div class="col-12" style="width: max-content;">
-
-  <div class="input-group search-bar-width" style="width: 64vw;">
+<div class="col-12" >
+  <div class="input-group search-bar-width w-100" >
 
     <input  id="inputSearch"
             type="search"
             class="form-control"
-            placeholder="Nunca dejes de buscar"
-            aria-label="Nunca dejes de buscar"
+            placeholder="{{appService.objCtrl.txtPlaceholder}}"
             [(ngModel)]="txtSearch"
             (click)="$event.preventDefault()"
             (keyup.enter)="redirectToUrlWithQuery(txtSearch)">

@@ -2,7 +2,8 @@
   <ol class="breadcrumb">
     <li class="breadcrumb-item"
         *ngFor="let item of arrayTags">
-        <a class="breadcrumb-font" (click)="getItemsByBreadcrumb( item )">
+        <a class="breadcrumb-font"
+          (click)="getItemsByBreadcrumb( item )">
           {{ item | titlecase }}
         </a>
     </li>
